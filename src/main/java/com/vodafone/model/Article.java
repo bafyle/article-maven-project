@@ -65,5 +65,12 @@ public class Article {
     public void setAuthorId(Integer authorId) {
         this.authorId = authorId;
     }
+
+    public void setFromArticle(Article article)
+    {
+        this.name = article.name;
+        this.author = article.author;
+        this.authorId = article.authorId;
+    }
     
 }

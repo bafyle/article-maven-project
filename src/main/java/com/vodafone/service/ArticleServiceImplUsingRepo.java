@@ -80,8 +80,15 @@ public class ArticleServiceImplUsingRepo implements ArticleService
     @Override
     public Article updateArticle(Integer id, Article article)
     {
-        article.setId(id);
-        return repo.save(article);
+        var optionalArticle = RORepo.findById(id);
+        if(optionalArticle.isEmpty())
+        {
+            throw new NotFoundException(String.format("Article by id: %s not found", id));
+        }
+        var art = optionalArticle.get();
+        art.setFromArticle(article);
+        addLinks(art);
+        return repo.save(art);
     }
 
     private void addLinks(Article article){
