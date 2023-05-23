@@ -1,7 +1,7 @@
 package com.vodafone.service;
 
-import com.vodafone.contoller.ArticlesController;
-import com.vodafone.contoller.AuthorController;
+import com.vodafone.controller.ArticlesController;
+import com.vodafone.controller.AuthorController;
 import com.vodafone.errorhandlling.NotFoundException;
 import com.vodafone.model.Article;
 import com.vodafone.model.Links;

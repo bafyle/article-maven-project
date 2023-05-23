@@ -1,4 +1,4 @@
-package com.vodafone.contoller;
+package com.vodafone.controller;
 
 import com.vodafone.model.Author;
 import com.vodafone.service.AuthorService;
